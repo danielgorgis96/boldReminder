@@ -15,8 +15,8 @@ def index():
     if request.method == 'POST':
         filterBolde = { 'name': request.form["bolde"] }
         filterDunke = { 'name': request.form["dunke"] }
-        newvaluesForBolde = { "$set": { 'bolde': datetime.datetime.now()} }
-        newvaluesForDunke = { "$set": { 'dunke': datetime.datetime.now()} }
+        newvaluesForBolde = { "$set": { 'bolde':datetime.date.today().strftime('%d-%m-%y')} }
+        newvaluesForDunke = { "$set": { 'dunke': datetime.date.today().strftime('%d-%m-%y')} }
         collection.update_one(filterBolde,newvaluesForBolde)
         collection.update_one(filterDunke,newvaluesForDunke)
         print(request.form["bolde"])
