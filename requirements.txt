@@ -75,7 +75,6 @@ google-resumable-media==0.5.0
 googleapis-common-protos==1.6.0
 googlefinance==0.7
 greenlet==0.4.15
-grpcio==1.27.0
 h11==0.12.0
 httplib2==0.13.1
 ibm-cloud-sdk-core==1.0.0
